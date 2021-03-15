@@ -1,0 +1,12 @@
+def evenSum(obj, sum=0):
+    for k in obj.values():
+        if type(k) == int and k%2 ==0:
+            sum += k
+        elif isinstance(k, dict):
+            sum += evenSum(k, sum=0)
+    return sum
+    
+    
+    
+    
+    
